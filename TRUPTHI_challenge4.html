@@ -1,0 +1,52 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Challenge 4</title>
+</head>
+<body>
+<script type="text/javascript">
+var str = prompt("Enter the Input", "");
+if (!(isNaN(str)))
+{
+var n, n1, rev = 0, rem;
+n = parseInt(str);
+n1 = n;
+while (n != 0)
+{
+rem = n % 10;
+n= parseInt(n/ 10);
+rev = rev * 10 + rem;
+}
+product = n1 * rev;
+alert("Reverse of " + str + " is " + rev);
+alert("Product of " + n1 + " and " + rev + " is " + product);
+}
+else
+{
+str = str.toUpperCase();
+var count = 0;
+for (var j = 0; j < str.length; j++)
+{
+var chr = str.charAt(j);
+if (chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+{
+count=count+1;
+}
+}
+alert("The number of vowels in " +str+ " is " + count); 
+for (var i = 0; i < str.length; i++)
+{
+var chr = str.charAt(i);
+if (chr == 'A' || chr == 'E' || chr == 'I' || chr == 'O' || chr == 'U')
+{
+break;
+}
+}
+if (i < str.length)
+alert("The position of the left most vowel is " + (i + 1));
+else
+alert("There are no vowels in this string!");
+}
+</script>
+</body>
+</html>
